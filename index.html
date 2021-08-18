@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoKenPo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <span id="count-down">
+        3
+    </span>
+
+    <main>
+        <h1 class="title">JoKenPo!</h1>
+        <section id="botoes">
+            <div class="container">
+                <div class="div-pedra">
+                    <button data-key="1" onclick="selecionarJokenpo(this)" id="btn-pedra" type="button">
+                        <i class="fas fa-hand-rock"></i>
+                    </button>
+                    <h2>Pedra</h2>
+                    <span class="player-pe d-none">VOCÊ</span>
+                    <span> - </span>
+                    <span class="cpu-pe d-none">CPU</span>
+                </div>
+                <div class="div-papel">
+                    <button data-key="2" onclick="selecionarJokenpo(this)" id="btn-papel" type="button">
+                        <i class="fas fa-hand-paper"></i>
+                    </button>
+                    <h2>Papel</h2>
+                    <span class="player-pa d-none">VOCÊ</span>
+                    <span> - </span>
+                    <span class="cpu-pa d-none">CPU</span>
+                </div>
+                <div class="div-tesoura">
+                    <button data-key="3" onclick="selecionarJokenpo(this)" id="btn-tesoura" type="button">
+                        <i class="fas fa-hand-scissors"></i>
+                    </button>
+                    <h2>Tesoura</h2>
+                    <span class="player-t d-none">VOCÊ</span>
+                    <span> - </span>
+                    <span class="cpu-t d-none">CPU</span>
+                </div>
+            </div>
+            <div class="container">
+                <h3 id="resultado"></h3>
+            </div>
+            <div class="container">
+                <div class="jogar">
+                    <button id="btn-jogar" onclick="carregarJogo()">JOGAR</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="placares">
+            <div class="column">
+                <div>
+                    <h2>Placares:</h2>
+                </div>
+                <div class="container">
+                    <h4>PLAYER</h4>
+                    <h4>CPU</h4>
+                </div>
+                <div class="container resultados">
+                    <span class="pontos-player">0</span>
+                    <span class="pontos-cpu">0</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
