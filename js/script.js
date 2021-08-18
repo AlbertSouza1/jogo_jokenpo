@@ -2,6 +2,8 @@ let clear;
 
 function carregarJogo() {
 
+    document.querySelector('#btn-jogar').setAttribute('disabled', '')
+
     document.querySelector('.player-t').classList.add('d-none')
     document.querySelector('.player-pa').classList.add('d-none')
     document.querySelector('.player-pe').classList.add('d-none')
@@ -139,7 +141,8 @@ function rodarJogo() {
         resultado.innerHTML = "EMPATE!"
     }
 
-}
+    document.querySelector('#btn-jogar').removeAttribute('disabled')
+}   
 
 function pegarValorPraCpu() {
 
@@ -158,6 +161,8 @@ function selecionarJokenpo(item) {
 
     item.classList.add('selected')
 
+    document.querySelector('#btn-jogar').removeAttribute('disabled')
+    document.querySelector('.jogar span').style.display = 'none'
     /*
     escolhaPlayer = item.getAttribute('data-key')
 

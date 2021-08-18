@@ -40,8 +40,24 @@ body {
   font-size: 18px;
   margin: 15px;
 }
+.container .div-pedra span,
+.container .div-papel span,
+.container .div-tesoura span {
+  font-weight: bold;
+  color: #f7571d;
+}
+
 .jogar {
-  margin: 20px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jogar span {
+  font-weight: bold;
+  color: coral;
+  margin-bottom: 25px;
+  font-size: 20px;
 }
 .jogar #btn-jogar {
   background-color: #42f71e;
@@ -50,7 +66,7 @@ body {
   height: 50px;
   border-radius: 15px;
 }
-.jogar #btn-jogar:hover {
+.jogar #btn-jogar:hover:not([disabled]) {
   cursor: pointer;
   background-color: coral;
 }
@@ -88,12 +104,12 @@ body {
 }
 
 #count-down {
-  font-size: 230px;
+  font-size: 130px;
   font-weight: bold;
   position: fixed;
-  left: 45vw;
-  top: 30vh;
-  color: #9da09c;
+  left: 47%;
+  top: 38%;
+  color: #f77b34;
   display: none;
 }
 
@@ -106,5 +122,3 @@ body {
   color: #073b33;
   font-size: 25px;
 }
-
-/*# sourceMappingURL=style.css.map */
